@@ -50,6 +50,10 @@ class LinkedList {
       console.log(`Current Size: ${this.length} nodes`);
     }
   }
+
+  logHead() {
+    console.log(`Current Head: ${this.head.value}`);
+  }
 }
 
 const myLinkedList = new LinkedList();
@@ -62,3 +66,4 @@ myLinkedList.prepend(100);
 
 myLinkedList.toString();
 myLinkedList.size();
+myLinkedList.logHead();
