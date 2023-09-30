@@ -42,14 +42,23 @@ class LinkedList {
       current = current.nextNode;
     }
   }
+
+  size() {
+    if (this.length === 1) {
+      console.log(`Current Size: ${this.length} node`);
+    } else {
+      console.log(`Current Size: ${this.length} nodes`);
+    }
+  }
 }
 
 const myLinkedList = new LinkedList();
 myLinkedList.prepend(200);
 myLinkedList.prepend(100);
-myLinkedList.prepend(50);
-myLinkedList.append(300);
-myLinkedList.append(400);
-myLinkedList.append(500);
+// myLinkedList.prepend(50);
+// myLinkedList.append(300);
+// myLinkedList.append(400);
+// myLinkedList.append(500);
 
 myLinkedList.toString();
+myLinkedList.size();
