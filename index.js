@@ -54,16 +54,29 @@ class LinkedList {
   logHead() {
     console.log(`Current Head: ${this.head.value}`);
   }
+
+  logTail() {
+    let current = this.head;
+
+    while (current.nextNode) {
+      current = current.nextNode;
+
+      if (!current.nextNode) {
+        console.log(`Current Tail: ${current.value}`);
+      }
+    }
+  }
 }
 
 const myLinkedList = new LinkedList();
 myLinkedList.prepend(200);
 myLinkedList.prepend(100);
 // myLinkedList.prepend(50);
-// myLinkedList.append(300);
-// myLinkedList.append(400);
-// myLinkedList.append(500);
+myLinkedList.append(300);
+myLinkedList.append(400);
+myLinkedList.append(500);
 
 myLinkedList.toString();
 myLinkedList.size();
 myLinkedList.logHead();
+myLinkedList.logTail();
