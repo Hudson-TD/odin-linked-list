@@ -16,6 +16,24 @@ class LinkedList {
     this.length++;
   }
 
+  append(value) {
+    let node = new Node(value);
+    let current;
+
+    if (this.head === null) {
+      this.head = node;
+    } else {
+      current = this.head;
+
+      while (current.nextNode) {
+        current = current.nextNode;
+      }
+
+      current.nextNode = node;
+    }
+    this.length++;
+  }
+
   toString() {
     let current = this.head;
 
@@ -27,7 +45,11 @@ class LinkedList {
 }
 
 const myLinkedList = new LinkedList();
-myLinkedList.prepend(100);
 myLinkedList.prepend(200);
-myLinkedList.prepend(300);
+myLinkedList.prepend(100);
+myLinkedList.prepend(50);
+myLinkedList.append(300);
+myLinkedList.append(400);
+myLinkedList.append(500);
+
 myLinkedList.toString();
