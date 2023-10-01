@@ -75,6 +75,17 @@ class LinkedList {
     }
   }
 
+  pop() {
+    let current = this.head;
+
+    while (current) {
+      if (current.nextNode.nextNode === null) {
+        current.nextNode = null;
+      }
+      current = current.nextNode;
+    }
+  }
+
   // contains(value) {
   //   let current = this.head;
 
@@ -105,13 +116,15 @@ myLinkedList.append(300);
 myLinkedList.append(400);
 myLinkedList.append(500);
 
+myLinkedList.toString();
+// myLinkedList.pop();
 // myLinkedList.toString();
 // myLinkedList.size();
 // myLinkedList.logHead();
 // myLinkedList.logTail();
-myLinkedList.findNodeAt(0);
-myLinkedList.findNodeAt(3);
-myLinkedList.findNodeAt(5);
+// myLinkedList.findNodeAt(0);
+// myLinkedList.findNodeAt(3);
+// myLinkedList.findNodeAt(5);
 
 // myLinkedList.contains(200);
 // myLinkedList.contains(300);
