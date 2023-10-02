@@ -16,7 +16,7 @@ This project demonstrates comprehension of the fundamental Linked List data stru
 - contains(value): Returns "True" if searched value exists in linked list, otherwise returns "False".
 - find(value):  Returns the index of the node containing searched value, otherwise returns null.
 - toString(): Returns formatted string to better visualize linked list
--     Returned string example: (ex. ( value ) -> ( value ) -> ( value ) -> null)
+-     Returned string example: ( value ) -> ( value ) -> ( value ) -> (...) -> null)
 
 # Notes
 
