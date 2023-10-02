@@ -71,16 +71,15 @@ export default class LinkedList {
     }
   }
 
-  // pop() {
-  //   let current = this.head;
-
-  //   while (current) {
-  //     if (current.nextNode.nextNode === null) {
-  //       current.nextNode = null;
-  //     }
-  //     current = current.nextNode;
-  //   }
-  // }
+  pop() {
+    let current = this.head;
+    let prev = undefined;
+    while (current.nextNode != null) {
+      prev = current;
+      current = current.nextNode;
+    }
+    prev.nextNode = null;
+  }
 
   contains(value) {
     let current = this.head;
