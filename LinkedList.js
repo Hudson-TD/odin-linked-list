@@ -81,6 +81,23 @@ export default class LinkedList {
     prev.nextNode = null;
   }
 
+  contains(value) {
+    let current = this.head;
+    let triggerFound;
+
+    while (current.nextNode !== null) {
+      if (current.value === value) {
+        triggerFound = true;
+        console.log("True");
+      }
+      current = current.nextNode;
+    }
+
+    if (!triggerFound) {
+      console.log("False");
+    }
+  }
+
   find(value) {
     let current = this.head;
     let counter = 0;
@@ -97,23 +114,6 @@ export default class LinkedList {
 
     if (!triggerFound) {
       console.log("Value not found");
-    }
-  }
-
-  contains(value) {
-    let current = this.head;
-    let triggerFound;
-
-    while (current.nextNode !== null) {
-      if (current.value === value) {
-        triggerFound = true;
-        console.log("True");
-      }
-      current = current.nextNode;
-    }
-
-    if (!triggerFound) {
-      console.log("False");
     }
   }
 
