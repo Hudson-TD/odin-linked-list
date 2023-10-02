@@ -75,28 +75,33 @@ class LinkedList {
     }
   }
 
-  pop() {
-    let current = this.head;
+  // pop() {
+  //   let current = this.head;
 
-    while (current) {
-      if (current.nextNode.nextNode === null) {
-        current.nextNode = null;
+  //   while (current) {
+  //     if (current.nextNode.nextNode === null) {
+  //       current.nextNode = null;
+  //     }
+  //     current = current.nextNode;
+  //   }
+  // }
+
+  contains(value) {
+    let current = this.head;
+    let triggerFound;
+
+    while (current.nextNode !== null) {
+      if (current.value === value) {
+        triggerFound = true;
+        console.log("True");
       }
       current = current.nextNode;
     }
+
+    if (!triggerFound) {
+      console.log("False");
+    }
   }
-
-  // contains(value) {
-  //   let current = this.head;
-
-  //   while (current.nextNode) {
-  //     if (current.value === value) {
-  //       console.log("True");
-  //     } else {
-  //       current = current.nextNode;
-  //     }
-  //   }
-  // }
 
   toString() {
     let current = this.head;
@@ -111,12 +116,12 @@ class LinkedList {
 const myLinkedList = new LinkedList();
 myLinkedList.prepend(200);
 myLinkedList.prepend(100);
-// myLinkedList.prepend(50);
+myLinkedList.prepend(50);
 myLinkedList.append(300);
 myLinkedList.append(400);
 myLinkedList.append(500);
 
-myLinkedList.toString();
+// myLinkedList.toString();
 // myLinkedList.pop();
 // myLinkedList.toString();
 // myLinkedList.size();
@@ -126,5 +131,10 @@ myLinkedList.toString();
 // myLinkedList.findNodeAt(3);
 // myLinkedList.findNodeAt(5);
 
-// myLinkedList.contains(200);
-// myLinkedList.contains(300);
+// myLinkedList.toString();
+
+console.log(myLinkedList);
+
+myLinkedList.contains(200);
+myLinkedList.contains(100);
+myLinkedList.contains(1);
