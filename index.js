@@ -105,11 +105,12 @@ class LinkedList {
 
   toString() {
     let current = this.head;
-
+    let fullList = "";
     while (current) {
-      console.log(current.value.toString());
+      fullList += `(${current.value}) -> `;
       current = current.nextNode;
     }
+    console.log((fullList += "null"));
   }
 }
 
@@ -119,7 +120,6 @@ myLinkedList.prepend(100);
 myLinkedList.prepend(50);
 myLinkedList.append(300);
 myLinkedList.append(400);
-myLinkedList.append(500);
 
 // myLinkedList.toString();
 // myLinkedList.pop();
@@ -133,8 +133,10 @@ myLinkedList.append(500);
 
 // myLinkedList.toString();
 
-console.log(myLinkedList);
+// console.log(myLinkedList);
 
-myLinkedList.contains(200);
-myLinkedList.contains(100);
-myLinkedList.contains(1);
+// myLinkedList.contains(200);
+// myLinkedList.contains(100);
+// myLinkedList.contains(1);
+
+myLinkedList.toString();
