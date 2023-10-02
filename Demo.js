@@ -32,6 +32,11 @@ myLinkedList.contains(40);
 myLinkedList.contains(100);
 myLinkedList.contains(1);
 
+//Showcase value search method (true/false)
+console.log(``);
+myLinkedList.find(200);
+myLinkedList.find(40);
+
 // Method to illustrate LL (functionally console logging in easily digestible format)
 console.log(``);
 console.log("Pre-popped list");
